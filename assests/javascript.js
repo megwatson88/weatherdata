@@ -7,7 +7,7 @@ function myFunction() {
         .then(function (weatherData) {
             console.log(weatherData);
         });
-    }
+}
     //do this to reatreeve data ^
     //let lat = weatherData.coord.lat;
    // let lon = weatherData.coord.lon;
