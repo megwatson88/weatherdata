@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" src="assests/styles.css"/>
     <title>Weather</title>
 </head>
+
 <body>
     <nav class="u-full-width nav-bar">
         Weather Where You Are or want to be 😁
@@ -14,18 +17,25 @@
     <h1>
         Weather in your area
     </h1>
-    <div>
-        <!--Where the search button will be-->
+    <div class="container">
+        <div class="column">
+            <input type="text" id="city-name" placeholder="city or zip-code">
+            <button class="button-primary">
+                Search
+            </button>
+        </div>
+
     </div>
-    <div>
+    <div class=>
         <!--Where the list of city-->
     </div>
     <div>
         <!--todays weather-->
     </div>
     <div>
-      <!--weather this week-->  
+        <!--weather this week-->
     </div>
     <script src="assests/javascript.js"></script>
 </body>
+
 </html>
