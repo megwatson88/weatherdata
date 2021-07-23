@@ -1,6 +1,6 @@
 // let cityName = document.getElementById("city-name")
 // function myFunction(){
-//   fetch(`api.openweathermap.org/data/2.5/weather?q=lompoc&appid=0653198af3dba7668f4d7e512b654c07`)  
+//   fetch(`api.openweathermap.org/data/2.5/weather?q=lompoc&appid=APIKEY`)  
 //   .then(function(weatherResponse){
 //       return weatherResponse.json();
 //       console.log(weatherResponse);}
@@ -14,7 +14,7 @@
 
 //fetch(``)
 
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Bakersfield&appid=0653198af3dba7668f4d7e512b654c07')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Bakersfield&appid=APIKEY')
   .then(function(res) {
    return res.json();})
   .then(function(data) {
