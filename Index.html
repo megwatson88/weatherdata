@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
-    <link rel="stylesheet" src="assests/styles.css"/>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" /> -->
+    <link rel="stylesheet" src="assests/styles.css" />
     <title>Weather</title>
 </head>
 
 <body>
     <nav class="u-full-width nav-bar">
-        Weather Where You Are or want to be 😁
+        Weather Where You Are or Want To Be 😁
     </nav>
     <h1>
         Weather in your area
@@ -26,15 +26,75 @@
         </div>
 
     </div>
-    <div class=>
+    <div class="row">
+        <div class="four columns">
+            Previous City
+        </div>
         <!--Where the list of city-->
+        <div class="eight columns">
+            Today's Weather
+            <p id="temp">
+                Temp
+            </p>
+            <p id="wind-speed">
+                wind speed
+            </p>
+            <p id="humidity">
+                humidity
+            </p>
+        </div>
     </div>
-    <div>
-        <!--todays weather-->
+    <div class="row">
+        <div class="ten columns">
+            Five days worth of weather
+
+
+            <div class="card">
+                <img>
+                <div class="container">
+                    <h4 id="tomrrow "><b>tomorrow </b></h4>
+                    <p>data</p>
+                </div>
+            </div>
+            <div class="card">
+                <img >
+                <div class="container">
+                    <h4 id="day2"><b>day2 </b></h4>
+                    <p>Architect & Engineer</p>
+                </div>
+            </div>
+            <div class="card">
+                <img >
+                <div class="container">
+                    <h4 id="day3"><b>Day 3</b></h4>
+                    <p>weather data</p>
+                </div>
+            </div>
+            <div class="card">
+                <img >
+                <div class="container">
+                    <h4 id="day4"><b>day 4</b></h4>
+                    <p>weather data</p>
+                </div>
+            </div>
+            <div class="card">
+                <img >
+                <div class="container">
+                    <h4 id="day5"><b>day 5 </b></h4>
+                    <p>weather data</p>
+                </div>
+            </div>
+            <p id="temp">
+                Temp
+            </p>
+            <p id="wind-speed">
+                wind speed
+            </p>
+            <p id="humidity">
+                humidity
+        </div>
     </div>
-    <div>
-        <!--weather this week-->
-    </div>
+
     <script src="assests/javascript.js"></script>
 </body>
 
