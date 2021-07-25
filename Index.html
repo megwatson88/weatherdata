@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
-    <link rel="stylesheet" href="assests/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <!--<link rel="stylesheet" href="assests/styles.css" /> -->
     <title>Weather</title>
 </head>
 
@@ -19,82 +19,64 @@
     </h1>
     <div class="container">
         <div class="column">
-            <input type="text" id="city-name" placeholder="city or zip-code">
-            <button class="button-primary">
+            <input type="text" id="city-name" placeholder="Type your City">
+            <button type="button" class="button-primary" onclick="getCityName();">
                 Search
             </button>
         </div>
 
     </div>
     <div class="row">
-        <div class="four columns">
+        <div class="four columns left">
             Previous City
-        </div>
-        <!--Where the list of city-->
-        <div class="eight columns">
+            <p id="Previous Cities"></p>
+            <!--Where the list of city-->
+        <div class=" eight columns right">
             Today's Weather
             <p id="temp">
-                
             </p>
             <p id="wind-speed">
-               
             </p>
             <p id="humidity">
-               
             </p>
             <p id="UV-Index">
-
             </p>
         </div>
-    </div>
-    <div class="row">
-        <div class="ten columns">
+        </div>
+        <div class="eight columns">
             Five days worth of weather
-
-
-            <div class="card">
+            <div class="container">
                 <img>
-                <div class="container">
+                <div class="three columns">
                     <h4 id="tomrrow "><b>tomorrow </b></h4>
                     <p>data</p>
                 </div>
             </div>
-            <div class="card">
-                <img >
-                <div class="container">
+            <div>
+                <div class="three columns">
                     <h4 id="day2"><b>day2 </b></h4>
                     <p>Architect & Engineer</p>
                 </div>
             </div>
             <div class="card">
-                <img >
-                <div class="container">
+
+                <div class="three columns">
                     <h4 id="day3"><b>Day 3</b></h4>
                     <p>weather data</p>
                 </div>
             </div>
             <div class="card">
-                <img >
-                <div class="container">
+                <div class="three columns">
                     <h4 id="day4"><b>day 4</b></h4>
                     <p>weather data</p>
                 </div>
             </div>
             <div class="card">
-                <img >
-                <div class="container">
+                <div class="three columns">
                     <h4 id="day5"><b>day 5 </b></h4>
                     <p>weather data</p>
                 </div>
             </div>
-            <p id="temp">
-                Temp
-            </p>
-            <p id="wind-speed">
-                wind speed
-            </p>
-            <p id="humidity">
-                humidity
         </div>
     </div>
 
