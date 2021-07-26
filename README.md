@@ -22,3 +22,9 @@ The purpose of this assignment is to develop skills in using APIs while also dev
 # sources 
 Openweathermap.org for API 
 w3schools.com for help
+
+# links 
+<ul>
+<li>  <a href="https://github.com/megwatson88/weatherdata"> Repo </li>
+<li> Webpage
+</ul>
