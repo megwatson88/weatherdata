@@ -1,14 +1,19 @@
 *{
     background-color: blanchedalmond;
 
-}
+};
 .container {
     border: 10px, dashed, red;
-}
+};
 h1 {
     text-align: center;
-}
+};
 .card {
     background-color: blue;
     border-radius: 12p;
-}
+};
+.UV-Index{
+    color: green;
+    color: red;
+    color: yellow;
+};
