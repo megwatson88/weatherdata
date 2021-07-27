@@ -65,13 +65,10 @@ function getCityName() {
                 //need button click events 
             };
 
-            //  console.log(data); the temperature, the wind speed, and the humidity
-            //do this to get data for the forloop for the 5 days  
         })
-}; 
+};
 
 // function getCityName() {
- let cityName = document.getElementById("city-name").value;
 //     cityName.addEventListener("click", value);
 //     console.log(cityName);
 //     //function ()
