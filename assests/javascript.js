@@ -2,13 +2,9 @@
 //initalize 
 //function to pull from local storage . get item 
 
+
 function getCityName() {
     let cityName = document.getElementById("city-name").value;
-    //cityName.addEventListener("click", value);
-    console.log(cityName);
-    //function ()
-};
-function getWeatherData() {
     //begin the nested fetch to get data for all the weather 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=0653198af3dba7668f4d7e512b654c07&units=imperial`)
         .then(function (weatherResponse) {
@@ -48,8 +44,14 @@ function getWeatherData() {
                         console.log(weatherDataFiveDay.daily[i].temp.max)
                         console.log(weatherDataFiveDay.daily[i].humidity)
                         console.log(weatherDataFiveDay.daily[i].windSpeed)
-                    }
-                    // let futureWeather = 
+                    };
+                    let tommorwTemp = weatherDataFiveDay.daily[i].temp.max;
+                    let tommorowHumidity = weatherDataFiveDay.daily[i].humidity;
+                    let tommorowWindspeed = weatherDataFiveDay.daily[i].windSpeed;
+                    // let weatherIcon = weatherDataFiveDay.daily[i].weather[i].icon;
+                    document.getElementById('tommrow-temp').textContent = `${tommorwTemp} Degrees F`
+                    document.getElementById('tomorrow-humidity').textContent = `${tommorowHumidity} % humidity`
+                    document.getElementById('tomorrow-windspeed').textContent = `${tommorowWindspeed} mph`
                 });
             let searchHistory = [];
             // already searched citys 
@@ -68,3 +70,9 @@ function getWeatherData() {
         })
 }; 
 
+// function getCityName() {
+ let cityName = document.getElementById("city-name").value;
+//     cityName.addEventListener("click", value);
+//     console.log(cityName);
+//     //function ()
+// };
