@@ -1,8 +1,14 @@
-//create variables for the search 
+
+//initalize 
+//function to pull from local storage . get item 
+
 function getCityName() {
     let cityName = document.getElementById("city-name").value;
     //cityName.addEventListener("click", value);
     console.log(cityName);
+    //function ()
+};
+function getWeatherData() {
     //begin the nested fetch to get data for all the weather 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=0653198af3dba7668f4d7e512b654c07&units=imperial`)
         .then(function (weatherResponse) {
@@ -37,19 +43,28 @@ function getCityName() {
                     //     uvi.attr("id", "UV-Index");
                     // };
                     //next 5 day forcast begins here 
-                    let futureWeather = []
-
-                    //already searched citys 
-                    let searchedCities = JSON.parse(localStorage.getItem("Previous-Cities"))
-                    function pastSearchedCitied(){
-                        if (searchedCities[0] !== undefined){
-                            city = searchedCities[0];
-                            document.getElementById('temp').textContent = `${temp} degree F`;
-                        }
+                    // for loop with incrmenting the array loop should end with 6 elements 
+                    for (var i = 0; i < 6; i++) {
+                        console.log(weatherDataFiveDay.daily[i].temp.max)
+                        console.log(weatherDataFiveDay.daily[i].humidity)
+                        console.log(weatherDataFiveDay.daily[i].windSpeed)
                     }
-
+                    // let futureWeather = 
                 });
+            let searchHistory = [];
+            // already searched citys 
+            function saveSearchHistory(searchedItem) {
+                searchHistory.push(searchedItem);
+                localStorage.setItem("searchedHistory", JSON.stringify(searchHistory));
+                // function needs to display 
+                // call function 
+
+
+                //need button click events 
+            };
+
             //  console.log(data); the temperature, the wind speed, and the humidity
-            //do this to get data for the forloop for the 5 days   
+            //do this to get data for the forloop for the 5 days  
         })
-}
+}; 
+
