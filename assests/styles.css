@@ -1,5 +1,6 @@
 *{
-    background-color: blanchedalmond;
+    background-color: #d6cbd3;
+    color: black;
 
 };
 .container {
@@ -9,7 +10,7 @@ h1 {
     text-align: center;
 };
 .card {
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   box-shadow: 0 4px 8px 0 red;
     border-radius: 12p;
 };
 .UV-Index{

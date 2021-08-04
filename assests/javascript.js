@@ -67,9 +67,3 @@ function getCityName() {
 
         })
 };
-
-// function getCityName() {
-//     cityName.addEventListener("click", value);
-//     console.log(cityName);
-//     //function ()
-// };
