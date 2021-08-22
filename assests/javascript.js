@@ -30,13 +30,13 @@ function getCityName() {
                     //color changes for UV index 
                     let uvi = weatherDataFiveDay.current.uvi;
                     document.getElementById("UV-Index").textContent = `${uvi} UV Index`;
-                    // if (uvi < 3) {
-                    //     uvi.attr("id", "UV-Index");
-                    // } else if (uvi < 6) {
-                    //     uvi.attr("id", "UV-Index");
-                    // } else if (uvi > 10) {
-                    //     uvi.attr("id", "UV-Index");
-                    // };
+                    if (uvi < 3) {
+                        uvi.attr("id", "UV-Index");
+                    } else if (uvi < 6) {
+                        uvi.attr("id", "UV-Index");
+                    } else if (uvi > 10) {
+                        uvi.attr("id", "UV-Index");
+                    };
                     //next 5 day forcast begins here 
                     // for loop with incrmenting the array loop should end with 6 elements 
                     for (var i = 1; i < 6; i++) {
