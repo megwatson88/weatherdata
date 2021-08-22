@@ -1,11 +1,10 @@
 
-//initalize 
-//function to pull from local storage . get item 
-
-
+//var previousCities = querySelector()
+localStorage.getItem('cityName')
+//begin the nested fetch to get data for all the weather 
 function getCityName() {
-    let cityName = document.getElementById("city-name").value;
-    //begin the nested fetch to get data for all the weather 
+    let cityName = document.getElementById("city-name").value; 
+    localStorage.setItem('cityName',cityName)
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=0653198af3dba7668f4d7e512b654c07&units=imperial`)
         .then(function (weatherResponse) {
             return weatherResponse.json();
@@ -40,30 +39,34 @@ function getCityName() {
                     // };
                     //next 5 day forcast begins here 
                     // for loop with incrmenting the array loop should end with 6 elements 
-                    for (var i = 0; i < 6; i++) {
+                    for (var i = 1; i < 6; i++) {
                         console.log(weatherDataFiveDay.daily[i].temp.max)
                         console.log(weatherDataFiveDay.daily[i].humidity)
-                        console.log(weatherDataFiveDay.daily[i].windSpeed)
+                        console.log(weatherDataFiveDay.daily[i].wind_gust)
+
+                        let tommorwTemp = weatherDataFiveDay.daily[1].temp.max;
+                        let DayTwoHumidity = weatherDataFiveDay.daily[2].humidity;
+                        let tommorowWindspeed = weatherDataFiveDay.daily[1].windSpeed;
+                        //let weatherIcon = weatherDataFiveDay.daily[i].weather[i].icon;
+                        document.querySelector('#tommrow-temp').textContent = `${tommorwTemp} Degrees F`;
                     };
-                    let tommorwTemp = weatherDataFiveDay.daily[i].temp.max;
-                    let tommorowHumidity = weatherDataFiveDay.daily[i].humidity;
-                    let tommorowWindspeed = weatherDataFiveDay.daily[i].windSpeed;
-                    // let weatherIcon = weatherDataFiveDay.daily[i].weather[i].icon;
-                    document.getElementById('tommrow-temp').textContent = `${tommorwTemp} Degrees F`
-                    document.getElementById('tomorrow-humidity').textContent = `${tommorowHumidity} % humidity`
-                    document.getElementById('tomorrow-windspeed').textContent = `${tommorowWindspeed} mph`
+                        document.getElementById('').textContent = `${DayTwoHumidity} % humidity`
+                        document.getElementById('tomorrow-windspeed').textContent = `${tommorowWindspeed} mph`
                 });
-            let searchHistory = [];
-            // already searched citys 
-            function saveSearchHistory(searchedItem) {
-                searchHistory.push(searchedItem);
-                localStorage.setItem("searchedHistory", JSON.stringify(searchHistory));
-                // function needs to display 
-                // call function 
-
-
-                //need button click events 
-            };
-
+//keep repeating the syetem for day 2-5 
         })
 };
+//function to set and get local storage set golabal varliables and grab them from the input 
+// build the fuction to recall the local storage data and populate it into the previous searched cities. 
+
+// let searchHistory = [];
+//             // already searched citys 
+//             function saveSearchHistory(searchedItem) {
+//                 searchHistory.push(searchedItem);
+//                 localStorage.setItem("searchedHistory", JSON.stringify(searchHistory));
+//                 // function needs to display 
+//                 // call function 
+
+
+//                 //need button click events 
+//             };
