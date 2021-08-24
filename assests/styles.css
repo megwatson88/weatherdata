@@ -17,6 +17,11 @@ h1 {
 .card {
    box-shadow: 0 4px 8px 0 red;
     border-radius: 12p;
+    border: 10px, dashed, red;
+    width: auto;
+    background-color: antiquewhite;
+    padding: auto;
+    
 };
 #UV-Index{
     color: green;
